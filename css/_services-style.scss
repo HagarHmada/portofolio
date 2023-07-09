@@ -1,0 +1,48 @@
+.services{
+    background-color: #{$main-black-1};
+    padding: 20px 0;
+    h1{
+        font-size: 3.5rem;
+        margin-left: 50px;
+        text-align: center;
+        padding: 2rem 0px;
+    }
+    .content-services{
+        @extend .flex-defult;
+        .content-services-box{
+            width: 300px;
+            background-color: #{$main-black-2};
+            border-radius: 30px;
+            padding: 1.3rem 2rem;
+            text-align: center;
+            i{
+                font-size: 2rem;
+                cursor: pointer;
+                color: #{$main-red};
+            }
+            h2{
+                margin: 10px 0px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width : 575px){
+    .services{
+        h1{
+            margin: 0;
+        }
+        .content-services{ 
+            flex-wrap: wrap;
+            .content-services-box{
+                width: calc(50% - 20px);
+                flex-wrap: wrap;
+                margin: 10px ;
+
+
+        }}
+    } 
+
+
+}

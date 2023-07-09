@@ -1,0 +1,80 @@
+footer{
+    background-color: #{$main-black-1};
+    width: 100%;
+    padding-top: 50px;
+.footer{
+    width: 60%;
+    margin: auto;
+    .contact-footer{
+        @extend .flex-defult;
+        .contact-info{
+            width: 40%;
+            h1,p,h3{
+                margin-bottom: 2rem;
+            }
+        }
+        .contact-form{
+            input{
+                width: 100%;
+                height: 50px;
+                margin-bottom: 2rem;
+            }
+            .submit{
+                background-color: #{$main-red};
+                border: none;
+                @extend .button;
+                @include hover-active-button;
+                @include transition( all 0.2s ease-in-out);
+            }
+            ::placeholder{
+                padding: 10px
+            }
+            .form-flex{
+                @extend .flex-defult;
+            }
+        }
+    }
+    .footer-contact{
+        margin-top: 3rem;
+        // text-align: center;
+        @extend .flex-defult;
+        a{
+            margin-right: 1.5rem;
+            font-size: 2rem;
+            color: #{$main-white};                    
+        }
+        :hover{
+            @include transition( all 0.2s ease-in-out);
+            @include hover-active-color(#{$main-red});
+        }
+        span{
+            display: block;
+            // text-align: center;
+            padding: 20px;
+        }
+
+    }
+
+}
+}
+
+@media screen and (max-width : 575px){
+    footer{
+        .footer{
+            width: 80%;
+        .contact-footer{
+            flex-wrap: wrap;
+            .contact-info{
+                width: 100%;
+                text-align: center;
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+            .contact-form{
+                width: 100%;
+            }
+        }
+    }
+}}
+@media screen and (max-width : 736px){}

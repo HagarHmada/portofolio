@@ -1,0 +1,5 @@
+@mixin hover-active-bg-color($bgc) {
+    &:hover{
+        background-color: $bgc;
+    }
+}
