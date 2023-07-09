@@ -1,6 +1,8 @@
 .about{
     background-color: #{$main-black-2};
     @extend .flex-defult;
+    @extend .container;
+    width: 100%;
     .about-img{
         width: 35%;
         img{
@@ -8,6 +10,7 @@
         }
     }
     .about-text{
+        color: #{$main-white};
         width: 35%;
         h1,h4{
             margin-bottom: 10px;
@@ -21,14 +24,14 @@
 }
 
 
-@media screen and (max-width : 575px){  
+@media screen and (min-width : 300px) and (max-width : 767px){  
     .about-img{
         display: none;
     } 
     .about{
         .about-text{
-            width: 50%;
-            padding: 10px 0px;
+            width: 100%;
+            padding: 20px ;
     }
     }
     }   

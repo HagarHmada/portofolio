@@ -32,12 +32,12 @@ html {
   color: #ffffff;
 }
 
-.container, .home .content, .home nav {
+.container, .skills, .services .content-services, .about, .home .content, .home nav {
   width: 80%;
   margin: auto;
 }
 
-.flex-defult, footer .footer .footer-contact, footer .footer .contact-footer .contact-form .form-flex, footer .footer .contact-footer, .skills .skills-text .skills-imgs .skill-img, .skills, .services .content-services, .about {
+.flex-defult, footer .footer .contact-footer .contact-form .form-flex, footer .footer .contact-footer, .skills .skills-text .skills-progress .skill-img, .skills, .services .content-services, .about {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -94,26 +94,31 @@ span {
 }
 
 .home {
+  padding: 20px 0px;
   width: 100%;
-  height: 100vh;
   background-color: #1a0101;
   display: flex;
   flex-direction: column;
 }
 .home nav {
+  padding: 20px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #1a0101;
 }
 .home nav h1 {
   font-size: 2.2rem;
   cursor: pointer;
+  color: #ffffff;
 }
 .home nav ul li {
   display: inline-block;
-  margin: 0.8rem 1.5rem;
+  margin: 0px 1.5rem;
   font-size: 1.2rem;
 }
 .home nav ul li a {
@@ -128,15 +133,12 @@ span {
   color: #C53F3F;
 }
 .home .content {
-  flex-grow: 1;
-  letter-spacing: 0.15rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 50px 0px;
 }
 .home .content .content-text {
-  position: relative;
-  bottom: 70px;
+  margin-top: 5%;
 }
 .home .content .content-text h4 {
   color: #c77dcf;
@@ -148,6 +150,10 @@ span {
 .home .content .content-text h1 {
   font-size: 4.5rem;
   margin: 1.5rem 0;
+  color: #ffffff;
+}
+.home .content .content-text h3 {
+  color: #ffffff;
 }
 .home .content .content-text .social {
   margin-top: 3rem;
@@ -169,18 +175,15 @@ span {
   color: #C53F3F;
 }
 .home .content .content-imgs {
-  width: 45%;
-  height: 90%;
-  position: relative;
-  align-self: flex-end;
+  width: 40%;
 }
 .home .content .content-imgs img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 100%;
 }
 
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
   html {
     font-size: 13px;
   }
@@ -210,14 +213,13 @@ span {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
     height: 100vh;
     text-align: center;
     background-color: #292929;
   }
   nav ul li a {
+    margin: 5rem;
     display: block;
-    margin: 50px;
   }
   .social {
     text-align: center;
@@ -241,6 +243,7 @@ span {
 }
 .about {
   background-color: #292929;
+  width: 100%;
 }
 .about .about-img {
   width: 35%;
@@ -249,6 +252,7 @@ span {
   width: 90%;
 }
 .about .about-text {
+  color: #ffffff;
   width: 35%;
 }
 .about .about-text h1, .about .about-text h4 {
@@ -260,13 +264,13 @@ span {
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
   .about-img {
     display: none;
   }
   .about .about-text {
-    width: 50%;
-    padding: 10px 0px;
+    width: 100%;
+    padding: 20px;
   }
 }
 .services {
@@ -278,13 +282,16 @@ span {
   margin-left: 50px;
   text-align: center;
   padding: 2rem 0px;
+  color: #ffffff;
 }
 .services .content-services .content-services-box {
+  color: #ffffff;
   width: 300px;
   background-color: #292929;
   border-radius: 30px;
   padding: 1.3rem 2rem;
   text-align: center;
+  margin: 0px 10px;
 }
 .services .content-services .content-services-box i {
   font-size: 2rem;
@@ -295,7 +302,7 @@ span {
   margin: 10px 0px;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
   .services h1 {
     margin: 0;
   }
@@ -303,13 +310,12 @@ span {
     flex-wrap: wrap;
   }
   .services .content-services .content-services-box {
-    width: calc(50% - 20px);
-    flex-wrap: wrap;
-    margin: 10px;
+    margin: 10px 0px;
   }
 }
 .skills {
-  padding: 20px;
+  width: 100%;
+  padding: 20px 0px;
   background-color: #292929;
 }
 .skills h1 {
@@ -318,35 +324,48 @@ span {
   text-align: left;
   padding: 2rem 0px;
 }
+.skills .skills-text {
+  width: 50%;
+}
 .skills .skills-text h1 {
   text-align: center;
   margin: 0;
+  color: #ffffff;
 }
-.skills .skills-text .skills-imgs {
+.skills .skills-text .skills-progress {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
-.skills .skills-text .skills-imgs .skill-img {
+.skills .skills-text .skills-progress span {
+  color: #ffffff;
+}
+.skills .skills-text .skills-progress .prog-skills {
+  height: 20px;
+}
+.skills .skills-text .skills-progress .prog-skills div {
+  background-color: #c77dcf;
+}
+.skills .skills-text .skills-progress .skill-img {
   width: 100px;
   height: 100px;
   background-color: #ffffff;
   border-radius: 50%;
   margin: 0 2rem 2rem 0;
 }
-.skills .skills-text .skills-imgs .skill-img img {
+.skills .skills-text .skills-progress .skill-img img {
   width: 70%;
   background-color: main-white;
 }
 .skills .skills-icon {
-  width: 40%;
+  width: 30%;
 }
 .skills .skills-icon img {
   width: 100%;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .skills .skills-text {
+    width: 90%;
+  }
   .skills .skills-icon {
     display: none;
   }
@@ -357,8 +376,8 @@ footer {
   padding-top: 50px;
 }
 footer .footer {
-  width: 60%;
   margin: auto;
+  color: #ffffff;
 }
 footer .footer .contact-footer .contact-info {
   width: 40%;
@@ -370,6 +389,7 @@ footer .footer .contact-footer .contact-form input {
   width: 100%;
   height: 50px;
   margin-bottom: 2rem;
+  border-radius: 50px;
 }
 footer .footer .contact-footer .contact-form .submit {
   background-color: #C53F3F;
@@ -388,7 +408,9 @@ footer .footer .contact-footer .contact-form ::placeholder {
   padding: 10px;
 }
 footer .footer .footer-contact {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 footer .footer .footer-contact a {
   margin-right: 1.5rem;

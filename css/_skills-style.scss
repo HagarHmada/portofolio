@@ -1,6 +1,8 @@
 .skills{
-    padding: 20px;
     @extend .flex-defult;
+    @extend .container;
+    width: 100%;
+    padding: 20px 0px;
     background-color: #{$main-black-2};
     h1{
         font-size: 3.5rem;
@@ -9,15 +11,23 @@
         padding: 2rem 0px;
     }
     .skills-text{
+        width: 50%;
         h1{
             text-align: center;
             margin: 0;
+            color: #{$main-white};
         }
-    .skills-imgs{
+    .skills-progress{
+        span{
+            color: #{$main-white};
+        }
         width: 100%;
-        display: flex;
-        flex-wrap:wrap;
-        justify-content: center;
+        .prog-skills{
+            height: 20px;
+          div{
+            background-color: #{$main-buble};
+          }  
+        }
         .skill-img{
             width: 100px;
             height: 100px;
@@ -32,7 +42,7 @@
         }
     }
     .skills-icon{
-        width: 40%;
+        width: 30%;
         img{
             width: 100%;
         }
@@ -40,8 +50,11 @@
 }
 
 
-@media screen and (max-width : 575px){
+@media screen and (min-width : 300px) and (max-width : 767px){
     .skills {
+        .skills-text{
+            width: 90%;
+        }
         .skills-icon{
             display: none;
         }
