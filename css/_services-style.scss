@@ -1,34 +1,36 @@
 .services{
-    // width: 100vw;
     background-color: #{$main-black-1};
-    padding: 20px 0;
+    padding: 3rem 0px;
     h1{
         font-size: 3.5rem;
-        margin-left: 50px;
         text-align: center;
-        padding: 2rem 0px;
         color: #{$main-white};
     }
     .content-services{
+        .content-services-info{
+            @extend .flex-defult;
         @extend .container;
-        @extend .flex-defult;
+        margin: 20px 0;
+
+        width: 100%;
         .content-services-box{
             color: #{$main-white};
-            width: 300px;
             background-color: #{$main-black-2};
             border-radius: 30px;
             padding: 1.3rem 2rem;
             text-align: center;
-            margin: 0px 10px;
-            i{
-                font-size: 2rem;
-                cursor: pointer;
-                color: #{$main-red};
-            }
+            margin: 10px;
+            width:500px;
+
             h2{
                 margin: 10px 0px;
+                font-size: 1.4rem;
             }
 
+        }}
+        .experience{
+            border-top: 3px solid #{$main-black-2};
+            padding: 20px 0;
         }
     }
 }
@@ -37,13 +39,9 @@
     .services{
         h1{
             margin: 0;
+            font-size: 3rem;
         }
-        .content-services{ 
-            flex-wrap: wrap;
-            .content-services-box{
-                // flex-wrap: wrap;
-                margin: 10px 0px ;
-        }}
+
     } 
 
 }

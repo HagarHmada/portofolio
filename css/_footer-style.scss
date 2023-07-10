@@ -5,20 +5,29 @@ footer{
 .footer{
     margin: auto;
     color: #{$main-white};
+    @extend .container;
     .contact-footer{
         @extend .flex-defult;
         .contact-info{
-            width: 40%;
+            width: 100%;
+            padding: 0px 50px ;
             h1,p,h3{
                 margin-bottom: 2rem;
             }
         }
         .contact-form{
-            input{
+            form{
+                width: 100%;
+            input,textarea{
                 width: 100%;
                 height: 50px;
                 margin-bottom: 2rem;
                 border-radius: 50px;
+            }
+            textarea{
+                resize: none;
+                border-radius: none
+
             }
             .submit{
                 background-color: #{$main-red};
@@ -30,19 +39,14 @@ footer{
             ::placeholder{
                 padding: 10px
             }
-            .form-flex{
-                @extend .flex-defult;
-            }
-        }
+
+        }}
     }
     .footer-contact{
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        // text-align: center;
-        // @extend .flex-defult;
+        text-align: center;
+
         a{
-            margin-right: 1.5rem;
+            padding: 10px;
             font-size: 2rem;
             color: #{$main-white};                    
         }
@@ -60,14 +64,15 @@ footer{
 }
 }
 
-@media screen and (max-width : 575px){
-    footer{
+@media screen and (min-width : 300px) and (max-width : 767px){
+    footer{     
         .footer{
             width: 80%;
         .contact-footer{
             flex-wrap: wrap;
             .contact-info{
                 width: 100%;
+                padding: 0;
                 text-align: center;
                 p{
                     font-size: 1.4rem;
@@ -76,6 +81,7 @@ footer{
             .contact-form{
                 width: 100%;
             }
+
         }
     }
 }}

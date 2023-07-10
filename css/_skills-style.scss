@@ -1,15 +1,14 @@
 .skills{
-    @extend .flex-defult;
-    @extend .container;
     width: 100%;
     padding: 20px 0px;
     background-color: #{$main-black-2};
+    @extend .container;
     h1{
         font-size: 3.5rem;
-        margin-left: 50px;
-        text-align: left;
-        padding: 2rem 0px;
+        text-align: center;
     }
+    #skills{  
+        @extend .flex-defult;
     .skills-text{
         width: 50%;
         h1{
@@ -24,8 +23,9 @@
         width: 100%;
         .prog-skills{
             height: 20px;
+            margin-bottom: 10px;
           div{
-            background-color: #{$main-buble};
+            background-color: #{$main-red};
           }  
         }
         .skill-img{
@@ -42,16 +42,19 @@
         }
     }
     .skills-icon{
-        width: 30%;
+        width: 40%;
         img{
             width: 100%;
         }
-    }
+    }}
 }
 
 
 @media screen and (min-width : 300px) and (max-width : 767px){
     .skills {
+        #skills{
+
+       
         .skills-text{
             width: 90%;
         }
@@ -59,7 +62,7 @@
             display: none;
         }
 
-    }
+    } }
 }
 
 
